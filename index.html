@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -24,45 +25,47 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
-  <title>utm_ccaa</title>
+  <title>UTM-Cameroon</title>
   <link rel="manifest" href="manifest.json">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_Ob_g9kEUF835p0lQU_nipCDpzlCOhLA"></script>
 </head>
+
 <body>
 
-<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
 
-<!-- Firebase Configuration -->
-<script>
-      var firebaseConfig = {
-        apiKey: "AIzaSyDqbSkTNkjpqcMos03lTDXU9oosHLD5q5A",
-        authDomain: "utm-ccaa.firebaseapp.com",
-        databaseURL: "utm-ccaa.firebaseapp.com",
-        projectId: "utm-ccaa",
-        storageBucket: "utm-ccaa.appspot.com",
-        messagingSenderId: "342718576870",
-        appId: "1:342718576870:web:91626484a5bbaa85602327",
-        measurementId: "G-SDJ34HT4HB",
-      };
+  <!-- Firebase Configuration -->
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDqbSkTNkjpqcMos03lTDXU9oosHLD5q5A",
+      authDomain: "utm-ccaa.firebaseapp.com",
+      databaseURL: "utm-ccaa.firebaseapp.com",
+      projectId: "utm-ccaa",
+      storageBucket: "utm-ccaa.appspot.com",
+      messagingSenderId: "342718576870",
+      appId: "1:342718576870:web:91626484a5bbaa85602327",
+      measurementId: "G-SDJ34HT4HB",
+    };
 
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=830846697');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=3951017024');
       });
     }
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
+
 </html>
