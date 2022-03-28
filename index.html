@@ -16,7 +16,7 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Integrate drones operation into Air Traffic Management system.">
+  <meta name="description" content="Integrate drones operation into Air Traffic Management system">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,13 +27,69 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <title>UTM-Cameroon</title>
+  <title>UTM Cameroon</title>
   <link rel="manifest" href="manifest.json">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_Ob_g9kEUF835p0lQU_nipCDpzlCOhLA"></script>
+
+  <style>
+    body {
+      background-color: #f3f3f3c9;
+      overflow: hidden;
+    }
+
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .loader {
+      border: 5px solid #f3f3f3;
+      border-radius: 50%;
+      border: 5px solid;
+      border-top: 5px solid rgb(44, 138, 166);
+      border-right: 5px solid #f3f3f3c9;
+      border-bottom: 5px solid rgb(44, 138, 166);
+      border-left: 5px solid #f3f3f3c9;
+      width: 50px;
+      height: 50px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 
 <body>
-
+  <div id="loading_indicator" class="loading">
+    <!-- <img style="width: 140px; height: 60px;" src="./assets/gml.png" /> -->
+    <div class="loader"> </div>
+  </div>
   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
@@ -61,11 +117,22 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=3951017024');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=1265974671');
       });
     }
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
+  <!-- <script>
+    window.onload = function () {
+      setTimeout(function() {
+        var loading_indicator = document.getElementById("loading_indicator");
+        console.log("Kate");
+        if (loading_indicator) {
+          loading_indicator.remove();
+        }
+      }, 20000);
+    }
+  </script> -->
 </body>
 
 </html>
